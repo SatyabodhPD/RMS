@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application Form</title>
+    </head>
+    <body>
+        <body style="background-color:powderblue;"></body> 
+        <h1>Job Application Form</h1>
+        <form action="users_information.php" method="POST">
+            <h3>Personal Information</h3>
+            First Name:<input type="text" name="fname" placeholder="First Name">
+            Middle Name:<input type="text" name="mname" placeholder="Middle Name">
+            Last Name:<input type="text" name="lname" placeholder="Last Name">
+            <br><br>
+
+            <table>
+                <tr>
+                    <td>Current Address</td>
+                    <td>Permanent Address</td>
+                </tr>
+                <tr>
+                    <td><textarea rows="10" cols="30" name="currentaddress" placeholder="Type youraddress..."></textarea></td>
+                    <td><textarea rows="10" cols="30" name="permanentaddress" placeholder="Type youraddress..."></textarea></td>
+                </tr>
+            </table>
+
+            <br>
+            <p><strong>phone:</strong></p>
+             Phone Number: <input type="phone" name="Phone" size="30" maxlength="20" placeholder="country code">
+            <br>
+            <br>
+
+            Email:<input type="E-mail" name="email" placeholder="email Address">
+            
+            Upload Cv:<input type="file" name="cv"><br>
+
+            
+            <br>
+            
+            <strong>Employment Desired</strong>
+            <br>
+             <p><strong>position:</strong></p>
+             Manager:<input type="radio" name="position" value="Manager">
+             Secretary:<input type="radio" name="position" value="Secretary">
+             Security:<input type="radio" name="position" value="Security">
+
+            <br>
+
+            <p><strong>Are you currently employe:</strong></p>
+            Yes:<input type="radio" name="employment_status" value="yes">
+            NO:<input type="radio" name="employment_status" value="no">
+
+            <br>
+
+            <strong>Start date</strong><br>
+            <label for="start date">date:</label>
+            <input type="date" name="start_date">
+
+            <br><br>
+
+            <label for="skills"><b>Choose skills:</b></label>
+            <select name="skills" id="skills" multile>
+              <option value="c++">---</option>
+              <option value="---">c++</option>
+              <option value="java">java</option>
+              <option value="python">python</option>
+              <option value="html and css">html and css</option>
+              <option value=".net">.net</option>
+              <option value="Data structure">Data structure</option>
+              <option value="machine learning">machine learning</option>
+              <option value="DBMS">DBMS</option>
+            </select>
+
+            <br><br>
+             <b>Notice Period</b>:<input type="text" name="notice_period">
+             <br><br>
+             <b>Current CTC</b>:<input type="text" name="current_CTC">
+             <br><br>
+             <b>Expected CTC</b>:<input type="text" name="expected_CTC">
+
+
+            <hr>
+
+            <strong>Availability</strong>
+            <br>
+            Monday:<input type="checkbox" name="day" value="Monday">
+            Tuesday:<input type="checkbox" name="day" value="Tuesday">
+            Wednesday:<input type="checkbox" name="day" value="Wednesday">
+            Thursday:<input type="checkbox" name="day" value="Thursday">
+            Friday:<input type="checkbox" name="day" value="Friday">
+
+            <hr>
+
+            submit:<input type="submit" name="submit">
+            <br>
+            <br>
+            
+             <p>LOGOUT after filling the form</p>
+            <button onclick="document.location='login.php'">logout</button>
+                
+        </form>
+    </body>
+</html>

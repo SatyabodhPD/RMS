@@ -1,0 +1,19 @@
+<?php 
+include 'search1.php';
+
+  $sql=mysqli_query($connection,"Select name,content from ekalp where id = (select max(id) from ekalp)"); 
+$result=mysqli_fetch_assoc($sql);
+//$resu=$result['name']; 
+$result=$result['content'];
+echo $result."<br>";
+$filename = $result.'pdf';
+  header('Content-type: application/pdf');
+  header('Content-Disposition: inline; filename="' . $filename . '"');
+  header('Content-Transfer-Encoding: binary');
+  header('Accept-Ranges: bytes');
+  ob_clean();
+  ob_flush ();
+  @readfile($filename);
+ mysqli_close($connection);
+
+?>
